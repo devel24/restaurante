@@ -16,3 +16,6 @@ C:\Users\egarcia\source\repos\EjemploWindowsForms\EjemploWindowsForms\obj\Debug\
 C:\Users\egarcia\source\repos\EjemploWindowsForms\EjemploWindowsForms\obj\Debug\net7.0-windows\EjemploWindowsForms.pdb
 C:\Users\egarcia\source\repos\EjemploWindowsForms\EjemploWindowsForms\obj\Debug\net7.0-windows\EjemploWindowsForms.genruntimeconfig.cache
 C:\Users\egarcia\source\repos\EjemploWindowsForms\EjemploWindowsForms\obj\Debug\net7.0-windows\ref\EjemploWindowsForms.dll
+C:\Users\egarcia\source\repos\EjemploWindowsForms\EjemploWindowsForms\obj\Debug\net7.0-windows\EjemploWindowsForms.Splash.resources
+C:\Users\egarcia\source\repos\EjemploWindowsForms\EjemploWindowsForms\obj\Debug\net7.0-windows\EjemploWindowsForms.Login.resources
+C:\Users\egarcia\source\repos\EjemploWindowsForms\EjemploWindowsForms\obj\Debug\net7.0-windows\EjemploWindowsForms.frmMenu.resources

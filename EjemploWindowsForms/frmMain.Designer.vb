@@ -28,14 +28,17 @@ Partial Class frmMain
         tsbNuevoPedido = New ToolStripButton()
         tsbSalir = New ToolStripButton()
         dgvPedidos = New DataGridView()
-        PedidoBindingSource = New BindingSource(components)
         MesaDataGridViewTextBoxColumn = New DataGridViewTextBoxColumn()
         TotalDataGridViewTextBoxColumn = New DataGridViewTextBoxColumn()
         Editar = New DataGridViewButtonColumn()
         Pagar = New DataGridViewButtonColumn()
+        PedidoBindingSource = New BindingSource(components)
+        StatusStrip1 = New StatusStrip()
+        tslHora = New ToolStripStatusLabel()
         ToolStrip1.SuspendLayout()
         CType(dgvPedidos, ComponentModel.ISupportInitialize).BeginInit()
         CType(PedidoBindingSource, ComponentModel.ISupportInitialize).BeginInit()
+        StatusStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' ToolStrip1
@@ -80,10 +83,6 @@ Partial Class frmMain
         dgvPedidos.Size = New Size(800, 425)
         dgvPedidos.TabIndex = 1
         ' 
-        ' PedidoBindingSource
-        ' 
-        PedidoBindingSource.DataSource = GetType(Pedido)
-        ' 
         ' MesaDataGridViewTextBoxColumn
         ' 
         MesaDataGridViewTextBoxColumn.DataPropertyName = "Mesa"
@@ -116,11 +115,31 @@ Partial Class frmMain
         Pagar.Text = "Pagar"
         Pagar.UseColumnTextForButtonValue = True
         ' 
+        ' PedidoBindingSource
+        ' 
+        PedidoBindingSource.DataSource = GetType(Pedido)
+        ' 
+        ' StatusStrip1
+        ' 
+        StatusStrip1.Items.AddRange(New ToolStripItem() {tslHora})
+        StatusStrip1.Location = New Point(0, 428)
+        StatusStrip1.Name = "StatusStrip1"
+        StatusStrip1.Size = New Size(800, 22)
+        StatusStrip1.TabIndex = 2
+        StatusStrip1.Text = "StatusStrip1"
+        ' 
+        ' tslHora
+        ' 
+        tslHora.Name = "tslHora"
+        tslHora.Size = New Size(45, 17)
+        tslHora.Text = "tslHora"
+        ' 
         ' frmMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(StatusStrip1)
         Controls.Add(dgvPedidos)
         Controls.Add(ToolStrip1)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
@@ -130,6 +149,8 @@ Partial Class frmMain
         ToolStrip1.PerformLayout()
         CType(dgvPedidos, ComponentModel.ISupportInitialize).EndInit()
         CType(PedidoBindingSource, ComponentModel.ISupportInitialize).EndInit()
+        StatusStrip1.ResumeLayout(False)
+        StatusStrip1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -143,4 +164,6 @@ Partial Class frmMain
     Friend WithEvents TotalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Editar As DataGridViewButtonColumn
     Friend WithEvents Pagar As DataGridViewButtonColumn
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents tslHora As ToolStripStatusLabel
 End Class
